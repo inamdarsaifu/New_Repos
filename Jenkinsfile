@@ -7,4 +7,10 @@ node{
     sh 'mv target/*.jar target/New_Repos.jar'
   }
 
+  stage('Deploy-Dev'){
+      sshagent (['aws-instance']) {
+    	sh 'scp -o StrictHostKeyChecking=no target/*.jar ec2-user@13.233.11.166:/home/ec2-user/Dojo/Deploy_files/'
+      }
+  }
+
 }
