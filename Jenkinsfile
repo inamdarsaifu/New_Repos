@@ -3,7 +3,7 @@ node{
     git 'https://github.com/inamdarsaifu/New_Repos'
   }
   stage('Compile-Package'){
-    sh 'mvn package'
+    sh 'mvn clean package'
   }
 
 }
