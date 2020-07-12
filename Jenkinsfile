@@ -9,7 +9,7 @@ node{
 
   stage('Deploy-Dev'){
       sshagent (['aws-user']) {
-    	sh 'scp -p StrictHostKeyChecking=no target/*.jar ec2-user@172.31.45.211:/home/ec2-user/Dojo/Deploy_files/'
+    	sh 'scp -p StrictHostKeyChecking=no target/*.jar ec2-user@13.233.11.166:/home/ec2-user/Dojo/Deploy_files/'
       }
   }
 
