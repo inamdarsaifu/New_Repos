@@ -9,7 +9,7 @@ node{
 
   stage('Deploy-Dev'){
       sshagent (['aws-instance']) {
-    	sh 'cp -p target/*.jar home/ec2-user/Dojo/Deploy_files/'
+    	sh 'cp -p target/*.jar /home/ec2-user/Dojo/Deploy_files/'
       }
   }
 
