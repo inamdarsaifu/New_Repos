@@ -4,6 +4,7 @@ node{
   }
   stage('Compile-Package'){
     sh 'mvn clean package'
+    sh 'mv target/*.jar target/New_Repos.jar'
   }
 
 }
